@@ -1,6 +1,7 @@
 package com.example.codepirates_finalproject_madt3125;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
 public class RegistrationForm extends AppCompatActivity {
