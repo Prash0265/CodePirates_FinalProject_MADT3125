@@ -143,6 +143,33 @@
                 android:textSize="16sp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Occupation Rate"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edtxt_occupationrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittext_shadow"
+                android:ems="9"
+                android:hint="occupation rate"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="2dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
 
 
 </LinearLayout>
