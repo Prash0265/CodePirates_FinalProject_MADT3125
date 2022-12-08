@@ -248,7 +248,34 @@
                 android:textSize="15sp"/>
         </RadioGroup>
 
-
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Side Car"
+                android:textSize="15sp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="5dp"/>
+            <RadioButton
+                android:id="@+id/Yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="yes"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:layout_marginEnd="50dp"/>
+            <RadioButton
+                android:id="@+id/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="no"
+                android:gravity="center"
+                android:textSize="15sp"/>
+        </RadioGroup>
 
 </LinearLayout>
     </ScrollView>
