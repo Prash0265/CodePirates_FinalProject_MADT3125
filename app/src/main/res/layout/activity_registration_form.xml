@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -23,10 +29,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -55,10 +57,11 @@
                     android:background="@drawable/edittext_shadow"
                     android:ems="9"
                     android:hint="@string/first_name"
-                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
                     android:paddingTop="5dp"
                     android:paddingBottom="2dp"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
             </LinearLayout>
 
             <LinearLayout
@@ -98,7 +101,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Date of Birth"
+                    android:text="@string/date_of_birth"
                     android:textSize="15sp" />
 
                 <EditText
@@ -108,12 +111,13 @@
                     android:layout_weight="1.2"
                     android:background="@drawable/edittext_shadow"
                     android:ems="9"
-                    android:hint="dd-mm-yyyy"
-                    android:paddingLeft="10dp"
+                    android:hint="@string/dd_mm_yyyy"
+                    android:inputType="date"
+                    android:paddingStart="10dp"
                     android:paddingTop="5dp"
                     android:paddingBottom="2dp"
-                    android:inputType="date"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
             </LinearLayout>
 
             <LinearLayout
@@ -136,7 +140,7 @@
                     android:layout_weight="1.2"
                     android:background="@drawable/edittext_shadow"
                     android:ems="9"
-                    android:hint="monthly salary"
+                    android:hint="@string/monthly_salary_hint"
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
                     android:paddingBottom="2dp"
@@ -163,7 +167,7 @@
                     android:layout_weight="1.2"
                     android:background="@drawable/edittext_shadow"
                     android:ems="9"
-                    android:hint="occupation rate"
+                    android:hint="@string/occupation_rate_hint"
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
                     android:paddingBottom="2dp"
@@ -190,7 +194,7 @@
                     android:layout_weight="1.2"
                     android:background="@drawable/edittext_shadow"
                     android:ems="9"
-                    android:hint="employee id"
+                    android:hint="@string/employee_id_hint"
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
                     android:paddingBottom="2dp"
@@ -207,14 +211,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Employee Type"
+                    android:text="@string/employee_type"
                     android:textSize="15sp" />
 
                 <Spinner
                     android:id="@+id/employeeType"
-                    android:layout_weight="1.2"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2" />
 
             </LinearLayout>
 
@@ -222,13 +226,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:visibility="gone"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <TextView
+                    android:id="@+id/empSelection"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/empSelection"
                     android:layout_weight="1"
                     android:text=""
                     android:textSize="15sp" />
@@ -389,19 +393,18 @@
                 <Spinner
                     android:id="@+id/vehicleColor"
                     android:layout_width="0dp"
-                    android:layout_weight="1.2"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2" />
 
             </LinearLayout>
 
             <Button
                 android:id="@+id/btn_register"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="15"
                 android:text="@string/register" />
         </LinearLayout>
 
-    </ScrollView>
 
 </LinearLayout>
+</ScrollView>
