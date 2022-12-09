@@ -203,17 +203,17 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Employee Type"
                     android:textSize="15sp" />
 
                 <Spinner
                     android:id="@+id/spnremployeetype"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent" />
+                    android:layout_weight="1.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
@@ -352,17 +352,17 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/vehicle_color"
                     android:textSize="15sp" />
 
                 <Spinner
                     android:id="@+id/spnrvehiclecolor"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent" />
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
