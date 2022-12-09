@@ -48,7 +48,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/edtxt_firtname"
+                    android:id="@+id/firstName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.2"
@@ -75,7 +75,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/edtxt_lastname"
+                    android:id="@+id/lastName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.2"
@@ -98,20 +98,21 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/employee_birth_year"
+                    android:text="Date of Birth"
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/edtxt_birthyear"
+                    android:id="@+id/birthYear"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.2"
                     android:background="@drawable/edittext_shadow"
                     android:ems="9"
-                    android:hint="@string/birth_year"
+                    android:hint="dd-mm-yyyy"
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
                     android:paddingBottom="2dp"
+                    android:inputType="date"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -129,7 +130,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/edtxt_monthlysalary"
+                    android:id="@+id/monthlySalary"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.2"
@@ -156,7 +157,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/edtxt_occupationrate"
+                    android:id="@+id/occupation_rate"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.2"
@@ -183,7 +184,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/edtxt_employeeid"
+                    android:id="@+id/employeeID"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.2"
@@ -210,7 +211,7 @@
                     android:textSize="15sp" />
 
                 <Spinner
-                    android:id="@+id/spnremployeetype"
+                    android:id="@+id/employeeType"
                     android:layout_weight="1.2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
@@ -227,13 +228,13 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtvw_emp_selection"
+                    android:id="@+id/empSelection"
                     android:layout_weight="1"
                     android:text=""
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/edtxt_emp_properties"
+                    android:id="@+id/empProperties"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.2"
@@ -301,7 +302,7 @@
                     android:orientation="horizontal">
 
                     <RadioButton
-                        android:id="@+id/Yes"
+                        android:id="@+id/yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/yes"
@@ -330,7 +331,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/edtxt_vehiclemodel"
+                    android:id="@+id/vehicleModel"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.2"
@@ -358,7 +359,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/edtxt_platenumber"
+                    android:id="@+id/plateNumber"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.2"
@@ -386,7 +387,7 @@
                     android:textSize="15sp" />
 
                 <Spinner
-                    android:id="@+id/spnrvehiclecolor"
+                    android:id="@+id/vehicleColor"
                     android:layout_width="0dp"
                     android:layout_weight="1.2"
                     android:layout_height="wrap_content" />

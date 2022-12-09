@@ -14,8 +14,8 @@
     <string name="car">Car</string>
     <string name="motorcycle">Motorcycle</string>
     <string name="side_car">Side Car</string>
-    <string name="yes">yes</string>
-    <string name="no">no</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string name="vehicle_model">Vehicle Model</string>
     <string name="model">model</string>
     <string name="plate_number">Plate Number</string>
