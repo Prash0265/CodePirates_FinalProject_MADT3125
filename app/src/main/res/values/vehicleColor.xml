@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vehicleColor">
+        <item>Choose a color</item>
+        <item>Red</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Pink</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Orange</item>
+    </string-array>
+</resources>

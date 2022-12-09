@@ -206,9 +206,10 @@
                     android:textSize="15sp" />
 
                 <Spinner
-                    android:id="@+id/employeeType"
+                    android:id="@+id/spnr_employeeType"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:entries="@array/empType"
                     android:layout_weight="1.2" />
 
             </LinearLayout>
@@ -386,7 +387,8 @@
                     android:id="@+id/vehicleColor"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.2" />
+                    android:layout_weight="1.2"
+                    android:entries="@array/vehicleColor" />
 
             </LinearLayout>
 

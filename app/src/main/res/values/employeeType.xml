@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="empType">
+        <item>Choose a type</item>
+        <item name="manager">Manager</item>
+        <item name="programmer" >Programmer</item>
+        <item name="tester">Tester</item>
+    </string-array>
+</resources>
