@@ -18,6 +18,7 @@ enum EmployeeType {
         return label;
     }
 }
+
 public class Management {
     private static final Management databaseInstance = new Management();
 
@@ -31,8 +32,15 @@ public class Management {
         return databaseInstance;
     }
 
-    public ArrayList<Employee> getCarNamesData() {
+    public ArrayList<Employee> getEmployeesData() {
         return employeesData;
     }
 
+    public void addEmployee(Employee employee) {
+        employeesData.add(employee);
+    }
+
+    public Employee getEmployee(int position) {
+        return employeesData.get(position);
+    }
 }
