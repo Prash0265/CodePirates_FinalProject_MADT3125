@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.CodePirates_FinalProject_MADT3125" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#ff0000</item>
-        <item name="colorPrimaryVariant">#ff0000</item>
+        <item name="colorPrimary">#0099ff</item>
+        <item name="colorPrimaryVariant">#0099ff</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
