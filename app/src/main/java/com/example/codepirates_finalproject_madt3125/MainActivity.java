@@ -31,4 +31,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        // Clearing employee array
+        employees.clear();
+        // Adding all employee data from singelton to class array
+        employees.addAll(Management.getInstance().getEmployeeNames());
+        // Notify adapter to invoke update
+        adapter.notifyDataSetChanged();
+    }
 }
