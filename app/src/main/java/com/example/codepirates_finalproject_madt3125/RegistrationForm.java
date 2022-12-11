@@ -133,5 +133,51 @@ public class RegistrationForm extends AppCompatActivity implements AdapterView.O
         else if (vehicleColor.isEmpty()) msg = "Please Select Vehicle Color";
 
         if (msg.length() > 0) Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        else {
+            Employee employee;
+            Vehicle vehicle;
+            if (vehicleType.equals("Car")) {
+                vehicle = new Car(
+                        vehiclePlate,
+                        vehicleColor,
+                        vehicleModel,
+                        carType
+                );
+            } else {
+                vehicle = new Motorcycle(vehiclePlate,
+                        vehicleColor,
+                        vehicleModel,
+                        sideCar.equals("Yes")
+                );
+            }
+            if (empType.equals("Manager")) {
+                employee = new Manager(
+                        empFirstName + " " + empLastName,
+                        Integer.parseInt(empDate),
+                        Integer.parseInt(empProperties),
+                        Integer.parseInt(empOccupationRate),
+                        vehicle
+                );
+            } else if (empType.equals("Programmer")) {
+                employee = new Programmer(
+                        empFirstName + " " + empLastName,
+                        Integer.parseInt(empDate),
+                        Integer.parseInt(empProperties),
+                        Integer.parseInt(empOccupationRate),
+                        vehicle
+                );
+            } else {
+                employee = new Tester(
+                        empFirstName + " " + empLastName,
+                        Integer.parseInt(empDate),
+                        Integer.parseInt(empProperties),
+                        Integer.parseInt(empOccupationRate),
+                        vehicle
+                );
+            }
+
+            Management.getInstance().addEmployee(employee);
+            RegistrationForm.this.finish();
+        }
     }
 }
