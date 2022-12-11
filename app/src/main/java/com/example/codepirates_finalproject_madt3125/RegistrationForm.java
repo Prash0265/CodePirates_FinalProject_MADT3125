@@ -99,16 +99,20 @@ public class RegistrationForm extends AppCompatActivity implements AdapterView.O
         } else if (binding.vehicleType.getCheckedRadioButtonId() == R.id.motorcycle) {
             vehicleType = "Motorcycle";
         }
-        String carType = binding.editTextCarType.toString();
-        String sideCar = "";
+        String carType = binding.editTextCarType.getText().toString();
+        Boolean sideCar = false;
+        String sidecarSelected = "unChecked";
         if (binding.sideCarType.getCheckedRadioButtonId() == R.id.yes) {
-            vehicleType = "Yes";
+            sideCar = true;
+            sidecarSelected = "Checked";
         } else if (binding.sideCarType.getCheckedRadioButtonId() == R.id.no) {
-            vehicleType = "No";
+            sideCar = false;
+            sidecarSelected = "Checked";
         }
         String vehicleModel = binding.vehicleModel.getText().toString();
         String vehiclePlate = binding.plateNumber.getText().toString();
         String vehicleColor = binding.vehicleColor.getSelectedItem().toString();
+
 
         String msg = "";
         if (empFirstName.isEmpty()) msg = "Please Enter Your First Name";
@@ -126,7 +130,7 @@ public class RegistrationForm extends AppCompatActivity implements AdapterView.O
         else if (vehicleType.isEmpty()) msg = "Please Select a Vehicle Type";
         else if (vehicleType.equals("Car") && carType.isEmpty())
             msg = "Please Enter a Valid Car Type ";
-        else if (vehicleType.equals("Motorcycle") && sideCar.isEmpty())
+        else if (vehicleType.equals("Motorcycle")&& sidecarSelected.equals("unChecked")  )
             msg = "Please Select a Valid Side Car Type ";
         else if (vehicleModel.isEmpty()) msg = "Please Enter Vehicle Model ";
         else if (vehiclePlate.isEmpty()) msg = "Please Enter Vehicle Plate Number";
@@ -147,7 +151,7 @@ public class RegistrationForm extends AppCompatActivity implements AdapterView.O
                 vehicle = new Motorcycle(vehiclePlate,
                         vehicleColor,
                         vehicleModel,
-                        sideCar.equals("Yes")
+                       sideCar
                 );
             }
             if (empType.equals("Manager")) {

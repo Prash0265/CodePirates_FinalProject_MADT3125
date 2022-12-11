@@ -13,6 +13,7 @@ public class Motorcycle extends Vehicle {
     public String toString() {
         String vehicleDescription;
         vehicleDescription = super.toString();
+
         if (sidecar) {
             vehicleDescription += "\t - with sidecar\n";
         } else vehicleDescription += "\t - without sidecar\n";

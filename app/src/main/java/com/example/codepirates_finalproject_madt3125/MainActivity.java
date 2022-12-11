@@ -1,14 +1,11 @@
 package com.example.codepirates_finalproject_madt3125;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-
 import com.example.codepirates_finalproject_madt3125.databinding.ActivityMainBinding;
-
 import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -22,10 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         employees = Management.getInstance().getEmployeeNames();
-
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, employees);
         binding.empList.setAdapter(adapter);
-
         binding.empList.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(MainActivity.this, EmployeeDetail.class);
             intent.putExtra("position", position);
@@ -43,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRestart();
         // Clearing employee array
         employees.clear();
-        // Adding all employee data from singelton to class array
+        // Adding all employee data from singleton to class array
         employees.addAll(Management.getInstance().getEmployeeNames());
         // Notify adapter to invoke update
         adapter.notifyDataSetChanged();
