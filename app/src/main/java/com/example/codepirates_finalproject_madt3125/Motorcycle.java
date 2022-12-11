@@ -3,8 +3,8 @@ package com.example.codepirates_finalproject_madt3125;
 public class Motorcycle extends Vehicle {
     Boolean sidecar;
 
-    public Motorcycle(String make, String plate, String color, String category, Boolean sidecar) {
-        super(make, plate, color, category);
+    public Motorcycle(String plate, String color, String category, Boolean sidecar) {
+        super(plate, color, category);
         this.sidecar = sidecar;
     }
 
