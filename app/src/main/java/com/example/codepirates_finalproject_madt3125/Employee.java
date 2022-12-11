@@ -8,7 +8,6 @@ public class Employee {
     private final int rate;
     private final String role;
     Vehicle employeeVehicle;
-    Contract employeeContract;
     static int maxRate;
     static int minRate;
 
@@ -55,9 +54,6 @@ public class Employee {
 
     public float getMonthlySalary() {
         float monthlySalary = 0;
-        if (employeeContract != null) {
-            monthlySalary = employeeContract.getFinalAmount();
-        }
         monthlySalary *= getRate() / 100f;
         return monthlySalary;
     }
@@ -66,15 +62,6 @@ public class Employee {
         return getMonthlySalary() * 12;
     }
 
-
-    public void signContract(Contract employeeContract) {
-        this.employeeContract = employeeContract;
-    }
-
-
-    public String contractInfo() {
-        return getName() + " is a " + getRole();
-    }
 
     public String toString() {
         String output;
