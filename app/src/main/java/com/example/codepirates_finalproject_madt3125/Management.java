@@ -32,8 +32,12 @@ public class Management {
         return databaseInstance;
     }
 
-    public ArrayList<Employee> getEmployeesData() {
-        return employeesData;
+    public ArrayList<String> getEmployeeNames() {
+        ArrayList<String> employeeNames = new ArrayList<>();
+        employeesData.forEach(employee -> {
+            employeeNames.add(employee.getName());
+        });
+        return employeeNames;
     }
 
     public void addEmployee(Employee employee) {
