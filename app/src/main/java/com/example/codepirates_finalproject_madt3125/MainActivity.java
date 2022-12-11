@@ -26,11 +26,18 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, employees);
         binding.empList.setAdapter(adapter);
 
+        binding.empList.setOnItemClickListener((parent, view, position, id) -> {
+            Intent intent = new Intent(MainActivity.this, EmployeeDetail.class);
+            intent.putExtra("position", position);
+            startActivity(intent);
+        });
+
         binding.button.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, RegistrationForm.class);
             startActivity(intent);
         });
     }
+
     @Override
     protected void onRestart() {
         super.onRestart();
