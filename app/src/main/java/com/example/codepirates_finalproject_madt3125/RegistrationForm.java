@@ -1,15 +1,12 @@
 package com.example.codepirates_finalproject_madt3125;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
-
 import com.example.codepirates_finalproject_madt3125.databinding.ActivityRegistrationFormBinding;
 
-import java.text.NumberFormat;
 
 public class RegistrationForm extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ActivityRegistrationFormBinding binding;
@@ -18,12 +15,10 @@ public class RegistrationForm extends AppCompatActivity implements AdapterView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityRegistrationFormBinding.inflate(getLayoutInflater());
-
         setContentView(binding.getRoot());
+
         binding.spnrEmployeeType.setOnItemSelectedListener(this);
-
         binding.btnRegister.setOnClickListener(view -> onSubmit());
-
         binding.vehicleType.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.car:

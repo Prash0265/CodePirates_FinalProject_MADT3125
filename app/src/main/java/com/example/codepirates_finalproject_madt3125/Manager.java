@@ -17,6 +17,7 @@ public class Manager extends Employee {
     }
 
 
+
     @Override
     public float getAnnualIncome() {
         bonus = GAIN_FACTOR_CLIENT * nbClients;
