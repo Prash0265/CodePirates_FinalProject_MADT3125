@@ -2,25 +2,8 @@ package com.example.codepirates_finalproject_madt3125;
 
 import java.util.ArrayList;
 
-enum EmployeeType {
-    Manager("Manager"),
-    Programmer("Programmer"),
-    Tester("Tester");
-
-
-    private final String label;
-
-    EmployeeType(String label) {
-        this.label = label;
-    }
-
-//    public String getLabel() {
-//        return label;
-//    }
-}
-
 public class Management {
-    private static final Management databaseInstance = new Management();
+    private static final Management managementInstance = new Management();
     private final ArrayList<Employee> employeesData;
 
     private Management() {
@@ -28,7 +11,7 @@ public class Management {
     }
 
     public static Management getInstance() {
-        return databaseInstance;
+        return managementInstance;
     }
 
     public ArrayList<String> getEmployeeNames() {
@@ -41,7 +24,10 @@ public class Management {
         employeesData.add(employee);
     }
 
-    public Employee getEmployee(int position) {
-        return employeesData.get(position);
+    public Employee getEmployee(String name) {
+        for (int i = 0; i < employeesData.size(); i++) {
+            if (employeesData.get(i).getName().equalsIgnoreCase(name)) return employeesData.get(i);
+        }
+        return null;
     }
 }
