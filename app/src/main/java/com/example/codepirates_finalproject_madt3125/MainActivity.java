@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, RegistrationForm.class);
             startActivity(intent);
         });
+
     }
 
     @Override

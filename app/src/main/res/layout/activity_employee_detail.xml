@@ -8,13 +8,13 @@
 
     <TextView
         android:id="@+id/employeeDetails"
-        android:layout_width="272dp"
-        android:layout_height="206dp"
+        android:layout_width="371dp"
+        android:layout_height="377dp"
         android:layout_marginTop="44dp"
         android:text="TextView"
+        android:textColor="#0099ff"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#0099ff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

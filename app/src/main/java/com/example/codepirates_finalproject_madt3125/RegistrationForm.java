@@ -23,15 +23,15 @@ public class RegistrationForm extends AppCompatActivity implements AdapterView.O
             switch (checkedId) {
                 case R.id.car:
                     binding.editTextCarType.setVisibility(View.VISIBLE);
-                    binding.textView4.setVisibility(View.VISIBLE);
+                    binding.textViewCarType.setVisibility(View.VISIBLE);
                     binding.sideCarType.setVisibility(View.GONE);
-                    binding.textView5.setVisibility(View.GONE);
+                    binding.textViewSideCar.setVisibility(View.GONE);
                     break;
                 case R.id.motorcycle:
                     binding.editTextCarType.setVisibility(View.GONE);
-                    binding.textView4.setVisibility(View.GONE);
+                    binding.textViewCarType.setVisibility(View.GONE);
                     binding.sideCarType.setVisibility(View.VISIBLE);
-                    binding.textView5.setVisibility(View.VISIBLE);
+                    binding.textViewSideCar.setVisibility(View.VISIBLE);
                     break;
 
             }
@@ -43,23 +43,23 @@ public class RegistrationForm extends AppCompatActivity implements AdapterView.O
         String item = binding.spnrEmployeeType.getSelectedItem().toString();
         switch (item) {
             case "Manager":
-                binding.empProperties.setVisibility(View.VISIBLE);
                 binding.txtvwEmpSelection.setVisibility(View.VISIBLE);
                 binding.txtvwEmpSelection.setText("Total Number Of Clients:");
+                binding.empProperties.setVisibility(View.VISIBLE);
                 break;
             case "Tester":
-                binding.empProperties.setVisibility(View.VISIBLE);
                 binding.txtvwEmpSelection.setVisibility(View.VISIBLE);
                 binding.txtvwEmpSelection.setText("Total Number Of Bugs:");
+                binding.empProperties.setVisibility(View.VISIBLE);
                 break;
             case "Programmer":
-                binding.empProperties.setVisibility(View.VISIBLE);
                 binding.txtvwEmpSelection.setVisibility(View.VISIBLE);
                 binding.txtvwEmpSelection.setText("Total Number Of Projects:");
+                binding.empProperties.setVisibility(View.VISIBLE);
                 break;
             default:
-                binding.empProperties.setVisibility(View.GONE);
                 binding.txtvwEmpSelection.setVisibility(View.GONE);
+                binding.empProperties.setVisibility(View.GONE);
                 break;
         }
     }
@@ -123,10 +123,8 @@ public class RegistrationForm extends AppCompatActivity implements AdapterView.O
         else if (!isNumeric(empProperties)) msg = "Please Enter Valid Number";
         else if (empId.isEmpty()) msg = "Please Enter Your Employee ID";
         else if (vehicleType.isEmpty()) msg = "Please Select a Vehicle Type";
-        else if (vehicleType.equals("Car") && carType.isEmpty())
-            msg = "Please Enter a Valid Car Type ";
-        else if (vehicleType.equals("Motorcycle")&& sidecarSelected.equals("unChecked")  )
-            msg = "Please Select a Valid Side Car Type ";
+        else if (vehicleType.equals("Car") && carType.isEmpty()) msg = "Please Enter a Valid Car Type ";
+        else if (vehicleType.equals("Motorcycle") && sidecarSelected.equals("unChecked")) msg = "Please Select a Valid Side Car Type ";
         else if (vehicleModel.isEmpty()) msg = "Please Enter Vehicle Model ";
         else if (vehiclePlate.isEmpty()) msg = "Please Enter Vehicle Plate Number";
         else if (vehicleColor.isEmpty()) msg = "Please Select Vehicle Color";
@@ -146,7 +144,7 @@ public class RegistrationForm extends AppCompatActivity implements AdapterView.O
                 vehicle = new Motorcycle(vehiclePlate,
                         vehicleColor,
                         vehicleModel,
-                       sideCar
+                        sideCar
                 );
             }
             if (empType.equals("Manager")) {

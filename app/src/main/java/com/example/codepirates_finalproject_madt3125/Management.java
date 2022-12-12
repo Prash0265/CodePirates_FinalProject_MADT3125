@@ -14,14 +14,13 @@ enum EmployeeType {
         this.label = label;
     }
 
-    public String getLabel() {
-        return label;
-    }
+//    public String getLabel() {
+//        return label;
+//    }
 }
 
 public class Management {
     private static final Management databaseInstance = new Management();
-
     private final ArrayList<Employee> employeesData;
 
     private Management() {
@@ -34,9 +33,7 @@ public class Management {
 
     public ArrayList<String> getEmployeeNames() {
         ArrayList<String> employeeNames = new ArrayList<>();
-        employeesData.forEach(employee -> {
-            employeeNames.add(employee.getName());
-        });
+        employeesData.forEach(employee -> employeeNames.add(employee.getName()));
         return employeeNames;
     }
 

@@ -36,11 +36,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:padding="5dp"
-            android:textColor="#0099ff"
             android:text="Employee first name :"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/textView"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
             android:id="@+id/firstName"
@@ -57,12 +57,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
             android:padding="5dp"
             android:text="Employee last name :"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/firstName"/>
+            app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
         <EditText
             android:id="@+id/lastName"
@@ -79,12 +79,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
             android:padding="5dp"
             android:text="Employee date of birth :"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/lastName"/>
+            app:layout_constraintTop_toBottomOf="@+id/lastName" />
 
         <EditText
             android:id="@+id/birthYear"
@@ -102,12 +102,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
             android:padding="5dp"
             android:text="Employee monthly salary :"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/birthYear"/>
+            app:layout_constraintTop_toBottomOf="@+id/birthYear" />
 
         <EditText
             android:id="@+id/monthlySalary"
@@ -124,12 +124,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
             android:padding="5dp"
             android:text="Employee occupation rate :"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/monthlySalary"/>
+            app:layout_constraintTop_toBottomOf="@+id/monthlySalary" />
 
         <EditText
             android:id="@+id/occupation_rate"
@@ -147,12 +147,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
             android:padding="5dp"
             android:text="Employee Id :"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/occupation_rate"/>
+            app:layout_constraintTop_toBottomOf="@+id/occupation_rate" />
 
         <EditText
             android:id="@+id/employeeID"
@@ -170,20 +170,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
             android:padding="5dp"
             android:text="@string/employee_type"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/employeeID" />
 
         <Spinner
             android:id="@+id/spnr_employeeType"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/empType"
-            android:popupBackground="@drawable/edittext_shadow"
             android:padding="10dp"
+            android:popupBackground="@drawable/edittext_shadow"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
@@ -192,11 +193,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text=""
             android:padding="5dp"
-            android:textStyle="bold"
+            android:text=""
             android:textColor="#0099ff"
             android:textSize="15sp"
+            android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/spnr_employeeType" />
 
         <EditText
@@ -217,9 +218,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
             android:padding="5dp"
             android:text="@string/vehicle"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/vehicleType"
@@ -230,7 +231,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/textView4">
+            app:layout_constraintBottom_toTopOf="@+id/textView_carType">
 
             <RadioButton
                 android:id="@+id/car"
@@ -248,15 +249,15 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textView_carType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
             android:padding="5dp"
             android:text="Car Type :"
-            android:textStyle="bold"
+            android:textColor="#0099ff"
             android:textSize="15sp"
+            android:textStyle="bold"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@+id/vehicleType" />
 
@@ -270,19 +271,19 @@
             android:padding="10dp"
             android:textSize="16sp"
             android:visibility="gone"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_carType" />
 
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textView_sideCar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:padding="5dp"
-            android:textColor="#0099ff"
             android:text="@string/side_car"
-            android:textStyle="bold"
+            android:textColor="#0099ff"
             android:textSize="15sp"
+            android:textStyle="bold"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@+id/editTextCarType" />
 
@@ -290,9 +291,9 @@
             android:id="@+id/sideCarType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/textView5">
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/textView_sideCar">
 
             <RadioButton
                 android:id="@+id/yes"
@@ -308,17 +309,18 @@
                 android:text="@string/no"
                 android:textSize="15sp" />
         </RadioGroup>
+
         <TextView
             android:id="@+id/textview_vehicleModel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
             android:padding="5dp"
             android:text="Employee vehicle model :"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/sideCarType"/>
+            app:layout_constraintTop_toBottomOf="@+id/sideCarType" />
 
         <EditText
             android:id="@+id/vehicleModel"
@@ -336,12 +338,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
             android:padding="5dp"
             android:text="Employee vehicle plate number :"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/vehicleModel"/>
+            app:layout_constraintTop_toBottomOf="@+id/vehicleModel" />
 
         <EditText
             android:id="@+id/plateNumber"
@@ -359,22 +361,23 @@
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
             android:layout_marginTop="10dp"
-            android:textColor="#0099ff"
+            android:padding="5dp"
             android:text="@string/vehicle_color"
+            android:textColor="#0099ff"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/plateNumber" />
 
         <Spinner
             android:id="@+id/vehicleColor"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/vehicleColor"
-            android:popupBackground="@drawable/edittext_shadow"
             android:padding="10dp"
+            android:popupBackground="@drawable/edittext_shadow"
             app:layout_constraintBottom_toTopOf="@id/btn_register"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 
