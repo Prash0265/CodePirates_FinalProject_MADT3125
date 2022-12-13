@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             ArrayList<String> filteredNames = new ArrayList<>();
             employeeNames.forEach(employee -> {
-                if (employee.contains(text)) filteredNames.add(employee);
+                if (employee.toLowerCase().contains(text)) filteredNames.add(employee);
             });
             employees.clear();
             // Adding all employee data from singleton to class array
