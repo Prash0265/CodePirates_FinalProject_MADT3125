@@ -77,18 +77,14 @@ public class MainActivity extends AppCompatActivity {
         binding.searchView2.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                if (employees.contains(query)) {
-                    adapter.getFilter().filter(query);
-                } else {
-                    Toast.makeText(MainActivity.this, "No Match found", Toast.LENGTH_LONG).show();
-                }
-                return true;
+               filterData(query);
+                return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                adapter.getFilter().filter(newText);
-                return true;
+              filterData(newText);
+                return false;
             }
         });
 
@@ -106,5 +102,25 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
-
+    private void filterData(String text){
+        ArrayList<String> employeeNames = Management.getInstance().getEmployeeNames();
+        if (text.isEmpty()) {
+            employees.clear();
+            // Adding all employee data from singleton to class array
+            employees.addAll(employeeNames);
+            // Notify adapter to invoke update
+            adapter.notifyDataSetChanged();
+        }
+        else {
+            ArrayList<String> filteredNames = new ArrayList<>();
+            employeeNames.forEach(employee -> {
+                if (employee.contains(text)) filteredNames.add(employee);
+            });
+            employees.clear();
+            // Adding all employee data from singleton to class array
+            employees.addAll(filteredNames);
+            // Notify adapter to invoke update
+            adapter.notifyDataSetChanged();
+        }
+    }
 }
